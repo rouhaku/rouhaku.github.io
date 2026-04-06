@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>app-ads.txt 公開用リポジトリ</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Way Works | Developer Portal</title>
+    <meta name="description" content="Way Works - Innovative iOS Apps for Network Diagnostics and Video Editing.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>app-ads.txt 公開用リポジトリ</h1>
-  <p>このリポジトリは、AdMobの広告認証のために app-ads.txt を GitHub Pages 上で公開するためのものです。</p>
+    <div class="container">
+        <header class="animate-fade-in">
+            <h1 data-i18n="nav_title">Way Works</h1>
+            <p class="subtitle" data-i18n="nav_subtitle">Innovative iOS Application Development</p>
+        </header>
+
+        <main>
+            <div class="app-grid">
+                <!-- PacketLoss & SpeedScan -->
+                <article class="app-card">
+                    <img src="assets/packetloss_icon.png" alt="PacketLoss & SpeedScan" class="app-icon">
+                    <h2 class="app-name" data-i18n="packetloss_name">PacketLoss & SpeedScan</h2>
+                    <p class="app-tagline" data-i18n="packetloss_tagline">ネットワーク品質のリアルタイム計測・可視化ツール</p>
+                    
+                    <div class="status-section">
+                        <div class="status-header">
+                            <span class="status-label" data-i18n="status_label">Development Status</span>
+                            <span class="status-badge pending" data-i18n="status_pending">Plan & Design</span>
+                        </div>
+                        <p class="status-text" data-i18n="packetloss_status">
+                            Apple ガイドラインに適合するためのデザイン全面刷新、および VPN 機能継続のための法人化（起業）に向けた対応方針を検討中のため、2月以降アップデートを一時停止しています。
+                        </p>
+                        <div class="version-info">
+                            <span data-i18n="latest_version">Latest:</span> <span>v5.3.0</span>
+                            <span style="color: var(--text-secondary); font-size: 0.75rem;">(2026/1/27)</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="#" class="card-link privacy-link" data-app="packetloss" data-i18n="privacy_policy">Privacy Policy</a>
+                            <a href="#" class="card-link contact-link" data-app="packetloss" data-i18n="contact">Contact</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- VidEncoBox -->
+                <article class="app-card">
+                    <img src="assets/videncobox_icon.png" alt="VidEncoBox" class="app-icon">
+                    <h2 class="app-name" data-i18n="videncobox_name">VidEncoBox</h2>
+                    <p class="app-tagline" data-i18n="videncobox_tagline">動画変換・編集・圧縮ツール</p>
+                    
+                    <div class="status-section">
+                        <div class="status-header">
+                            <span class="status-label" data-i18n="status_label">Development Status</span>
+                            <span class="status-badge active" data-i18n="status_active">Ongoing</span>
+                        </div>
+                        <p class="status-text" data-i18n="videncobox_status">
+                            定期的な機能拡張およびパフォーマンス改善を継続実施中。
+                        </p>
+                        <div class="version-info">
+                            <span data-i18n="latest_version">Latest:</span> <span>v1.1.0</span>
+                            <span style="color: var(--text-secondary); font-size: 0.75rem;">(2026/4/5)</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="#" class="card-link privacy-link" data-app="videncobox" data-i18n="privacy_policy">Privacy Policy</a>
+                            <a href="#" class="card-link contact-link" data-app="videncobox" data-i18n="contact">Contact</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p class="copyright" data-i18n="copyright">&copy; 2026 Way Works. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

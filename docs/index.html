@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting Privacy Policy</title>
+  <script>
+    const lang = navigator.language || navigator.userLanguage;
+
+    const redirectMap = {
+      // Arabic
+      "ar": "privacy-ar.html",
+      // Bengali
+      "bn": "privacy-bn.html",
+      // Catalan
+      "ca": "privacy-ca.html",
+      // Czech
+      "cs": "privacy-cs.html",
+      // Danish
+      "da": "privacy-da.html",
+      // German
+      "de": "privacy-de.html",
+      // Greek
+      "el": "privacy-el.html",
+      // English
+      "en": "privacy-en.html",
+      "en-AU": "privacy-en-AU.html",
+      "en-CA": "privacy-en-CA.html",
+      "en-GB": "privacy-en-GB.html",
+      // Spanish
+      "es": "privacy-es.html",
+      "es-MX": "privacy-es-MX.html",
+      "es-419": "privacy-es-MX.html",
+      // Finnish
+      "fi": "privacy-fi.html",
+      // French
+      "fr": "privacy-fr.html",
+      "fr-CA": "privacy-fr-CA.html",
+      // Hebrew
+      "he": "privacy-he.html",
+      // Hindi
+      "hi": "privacy-hi.html",
+      // Croatian
+      "hr": "privacy-hr.html",
+      // Hungarian
+      "hu": "privacy-hu.html",
+      // Indonesian
+      "id": "privacy-id.html",
+      // Italian
+      "it": "privacy-it.html",
+      // Japanese
+      "ja": "privacy-ja.html",
+      // Korean
+      "ko": "privacy-ko.html",
+      // Malay
+      "ms": "privacy-ms.html",
+      // Norwegian Bokmål
+      "nb": "privacy-nb.html",
+      "no": "privacy-nb.html",
+      // Dutch
+      "nl": "privacy-nl.html",
+      // Polish
+      "pl": "privacy-pl.html",
+      // Portuguese
+      "pt": "privacy-pt.html",
+      "pt-BR": "privacy-pt-BR.html",
+      "pt-PT": "privacy-pt.html",
+      // Romanian
+      "ro": "privacy-ro.html",
+      // Russian
+      "ru": "privacy-ru.html",
+      // Slovak
+      "sk": "privacy-sk.html",
+      // Swedish
+      "sv": "privacy-sv.html",
+      // Thai
+      "th": "privacy-th.html",
+      // Turkish
+      "tr": "privacy-tr.html",
+      // Ukrainian
+      "uk": "privacy-uk.html",
+      // Vietnamese
+      "vi": "privacy-vi.html",
+      // Chinese
+      "zh": "privacy-zh-Hans.html",
+      "zh-CN": "privacy-zh-Hans.html",
+      "zh-SG": "privacy-zh-Hans.html",
+      "zh-Hans": "privacy-zh-Hans.html",
+      "zh-HK": "privacy-zh-Hant.html",
+      "zh-TW": "privacy-zh-Hant.html",
+      "zh-Hant": "privacy-zh-Hant.html"
+    };
+
+    const target =
+      redirectMap[lang] ||
+      redirectMap[lang.slice(0, 2)] ||
+      "privacy-en.html";
+
+    window.location.href = target;
+  </script>
+</head>
+<body>
+  <p>Redirecting to your language version of the privacy policy...</p>
+</body>
+</html>
