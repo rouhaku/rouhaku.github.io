@@ -118,16 +118,16 @@ const TRANSLATIONS = {
         "copyright": "© 2026 Way Works. Tots els drets reservats."
     },
     "pt": {
-        "page_title": "Way Works | Portal do Desenvolvedor",
-        "nav_subtitle": "Recursos avançados, acessíveis no iOS. Explorando ferramentas utilitárias refinadas.",
+        "page_title": "Way Works | Portal do Programador",
+        "nav_subtitle": "Funcionalidades avançadas, acessíveis no iOS. A explorar ferramentas utilitárias refinadas.",
         "status_label": "Estado de desenvolvimento",
         "status_pending": "Em análise",
         "status_active": "Em desenvolvimento",
         "latest_version": "Última:",
         "packetloss_tagline": "Ferramenta de medição e visualização de qualidade de rede em tempo real",
-        "packetloss_status": "As atualizações foram suspensas desde fevereiro enquanto avaliamos nossa estratégia de resposta, incluindo uma reformulação completa do design para conformidade com as diretrizes da Apple e a migração para uma conta de organização necessária para a manutenção da funcionalidade VPN.",
+        "packetloss_status": "As atualizações estão suspensas desde fevereiro enquanto ponderamos a nossa estratégia de resposta, incluindo uma reformulação completa do design para conformidade com as diretrizes da Apple e a migração para uma conta de organização necessária para a manutenção da funcionalidade VPN.",
         "videncobox_tagline": "Ferramenta de conversão, edição e compressão de vídeo",
-        "videncobox_status": "Melhorias funcionais e de desempenho regulares em andamento contínuo.",
+        "videncobox_status": "Melhorias funcionais e de desempenho regulares em curso.",
         "privacy_policy": "Política de Privacidade",
         "contact": "Contacto",
         "copyright": "© 2026 Way Works. Todos os direitos reservados."
@@ -686,8 +686,10 @@ SUPPORTED_LOCALES.forEach(loc => {
     }
 });
 
-// Regional variants that differ from their base in only a few strings.
-// Listing just the differences — rather than a full copy — keeps an edit to
+// Wording that differs between a regional variant and its base. es-MX and
+// fr-CA differ in a handful of strings; pt-BR is closer to half, since
+// European and Brazilian Portuguese diverge more widely. Keys absent here are
+// the ones both variants share — listing only the differences keeps an edit to
 // es/fr/pt flowing through to the variant instead of silently diverging from
 // it. Runs after the stub pass, so each variant already holds a copy of its
 // base and only the keys below are replaced.
@@ -704,7 +706,11 @@ const REGIONAL_OVERRIDES = {
         "contact": "Nous joindre"
     },
     'pt-BR': {
+        "page_title": "Way Works | Portal do Desenvolvedor",
+        "nav_subtitle": "Recursos avançados, acessíveis no iOS. Explorando ferramentas utilitárias refinadas.",
         "status_label": "Status de desenvolvimento",
+        "packetloss_status": "As atualizações estão suspensas desde fevereiro enquanto avaliamos nossa estratégia de resposta, incluindo uma reformulação completa do design para conformidade com as diretrizes da Apple e a migração para uma conta de organização necessária para a manutenção da funcionalidade VPN.",
+        "videncobox_status": "Melhorias funcionais e de desempenho regulares em andamento contínuo.",
         "contact": "Contato"
     }
 };
