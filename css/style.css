@@ -8,7 +8,15 @@
   --text-primary: #ffffff;
   --text-secondary: #a0a0ab;
   /* #555 was 2.65:1 on --bg-color — below the 4.5:1 WCAG AA floor for body
-     text. This is the dimmest tone that still clears it (4.86:1). */
+     text. This is the dimmest tone that still clears it (4.86:1).
+     Both figures are against --bg-color alone. Composited, the footer sits
+     directly over the body::after bloom and measures 4.60:1 — still AA, but
+     only 0.10 of headroom left, not 0.36. (Worst light pixel behind the
+     .copyright box, glyphs set to transparent, 1440x900, ?lang=en.
+     body::before, top right, is nowhere near the footer.)
+     So: do not darken this token further, and do not add or deepen a bloom
+     near the footer, without re-measuring. Phone widths are unmeasured — the
+     footer fell below the fold in that capture. */
   --text-tertiary: #7d7d88;
   --status-active: #10b981;
   --status-pending: #f59e0b;
@@ -303,10 +311,14 @@ h1 {
      than a 320px card has — .card-links wraps the row, and a label that still
      cannot fit breaks rather than spilling. */
   overflow-wrap: anywhere;
-  /* Text alone gives a 22px tap target, under the 24px floor. */
+  /* Text alone gives a 22px tap target, under the 24px floor. The width floor
+     is for Urdu: "رابطہ" sets to 23.33px in the Nastaliq face iOS picks, where
+     Chrome's Naskh gives it more than twice that. Every other locale clears 24
+     on its own (Gujarati is next at 27.16px). */
   display: inline-flex;
   align-items: center;
   min-height: 24px;
+  min-width: 24px;
   transition: color var(--dur-fast) var(--ease-out);
   position: relative;
 }
