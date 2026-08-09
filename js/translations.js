@@ -102,6 +102,21 @@ const TRANSLATIONS = {
         "contact": "Contacto",
         "copyright": "© 2026 Way Works. Todos los derechos reservados."
     },
+    "ca": {
+        "page_title": "Way Works | Portal per a Desenvolupadors",
+        "nav_subtitle": "Funcions avançades, accessibles a iOS. Explorant eines d'utilitat refinades.",
+        "status_label": "Estat de desenvolupament",
+        "status_pending": "En avaluació",
+        "status_active": "En curs",
+        "latest_version": "Darrera:",
+        "packetloss_tagline": "Eina de mesurament de la qualitat de la xarxa en temps real",
+        "packetloss_status": "Les actualitzacions estan suspeses des del febrer mentre avaluem la nostra estratègia de resposta, que inclou un redisseny complet per complir les directrius d'Apple i la migració a un compte d'organització necessària per mantenir la funcionalitat VPN.",
+        "videncobox_tagline": "Eina de conversió, edició i compressió de vídeo",
+        "videncobox_status": "Millores funcionals i de rendiment periòdiques en curs continu.",
+        "privacy_policy": "Política de privacitat",
+        "contact": "Contacte",
+        "copyright": "© 2026 Way Works. Tots els drets reservats."
+    },
     "pt": {
         "page_title": "Way Works | Portal do Desenvolvedor",
         "nav_subtitle": "Recursos avançados, acessíveis no iOS. Explorando ferramentas utilitárias refinadas.",
@@ -267,6 +282,21 @@ const TRANSLATIONS = {
         "contact": "Kontakt",
         "copyright": "© 2026 Way Works. Alle rettigheder forbeholdes."
     },
+    "nb": {
+        "page_title": "Way Works | Utviklerportal",
+        "nav_subtitle": "Avanserte funksjoner, tilgjengelige på iOS. Utforsker raffinerte verktøy.",
+        "status_label": "Utviklingsstatus",
+        "status_pending": "Under vurdering",
+        "status_active": "Pågår",
+        "latest_version": "Nyeste:",
+        "packetloss_tagline": "Verktøy for måling av nettverkskvalitet i sanntid",
+        "packetloss_status": "Oppdateringene har vært satt på pause siden februar mens vi vurderer hvordan vi skal gå videre, inkludert en fullstendig redesign for å oppfylle Apples retningslinjer og overgangen til en organisasjonskonto som kreves for å beholde VPN-funksjonaliteten.",
+        "videncobox_tagline": "Verktøy for videokonvertering, redigering og komprimering",
+        "videncobox_status": "Løpende levering av regelmessige funksjonsforbedringer og ytelsesforbedringer.",
+        "privacy_policy": "Personvernerklæring",
+        "contact": "Kontakt",
+        "copyright": "© 2026 Way Works. Med enerett."
+    },
     "pl": {
         "page_title": "Way Works | Portal Dewelopera",
         "nav_subtitle": "Zaawansowane funkcje, dostępne na iOS. Eksploracja wyrafinowanych narzędzi.",
@@ -387,6 +417,141 @@ const TRANSLATIONS = {
         "contact": "যোগাযোগ",
         "copyright": "© 2026 Way Works. সর্বস্বত্ব সংরক্ষিত।"
     },
+    "gu": {
+        "page_title": "Way Works | ડેવલપર પોર્ટલ",
+        "nav_subtitle": "iOS પર સુલભ અદ્યતન કાર્યક્ષમતા. પરિષ્કૃત ઉપયોગિતા સાધનોની શોધ કરો.",
+        "status_label": "વિકાસની સ્થિતિ",
+        "status_pending": "મૂલ્યાંકન હેઠળ",
+        "status_active": "ચાલુ છે",
+        "latest_version": "નવીનતમ:",
+        "packetloss_tagline": "રીઅલ-ટાઇમ નેટવર્ક ગુણવત્તા માપન સાધન",
+        "packetloss_status": "Apple માર્ગદર્શિકાના પાલન માટે સંપૂર્ણ ડિઝાઇન ફેરફાર અને VPN કાર્યક્ષમતા માટે જરૂરી સંસ્થા એકાઉન્ટ સ્થળાંતર સહિત અમારી પ્રતિસાદ વ્યૂહરચનાનું મૂલ્યાંકન કરી રહ્યા હોવાથી ફેબ્રુઆરીથી અપડેટ્સ સ્થગિત કરવામાં આવ્યા છે.",
+        "videncobox_tagline": "વિડિઓ રૂપાંતરણ, સંપાદન અને સંકોચન સાધન",
+        "videncobox_status": "નિયમિત કાર્યાત્મક વૃદ્ધિ અને પ્રદર્શન સુધારણા સતત પ્રદાન કરવામાં આવે છે.",
+        "privacy_policy": "ગોપનીયતા નીતિ",
+        "contact": "સંપર્ક",
+        "copyright": "© 2026 Way Works. સર્વાધિકાર સુરક્ષિત."
+    },
+    "kn": {
+        "page_title": "Way Works | ಡೆವಲಪರ್ ಪೋರ್ಟಲ್",
+        "nav_subtitle": "iOS ನಲ್ಲಿ ಲಭ್ಯವಿರುವ ಸುಧಾರಿತ ಕಾರ್ಯಶೀಲತೆ. ಪರಿಷ್ಕೃತ ಉಪಯುಕ್ತತೆ ಸಾಧನಗಳನ್ನು ಅನ್ವೇಷಿಸಿ.",
+        "status_label": "ಅಭಿವೃದ್ಧಿ ಸ್ಥಿತಿ",
+        "status_pending": "ಮೌಲ್ಯಮಾಪನದಲ್ಲಿದೆ",
+        "status_active": "ಪ್ರಗತಿಯಲ್ಲಿದೆ",
+        "latest_version": "ಇತ್ತೀಚಿನ:",
+        "packetloss_tagline": "ನೈಜ-ಸಮಯದ ನೆಟ್‌ವರ್ಕ್ ಗುಣಮಟ್ಟ ಅಳತೆ ಸಾಧನ",
+        "packetloss_status": "Apple ಮಾರ್ಗಸೂಚಿಗಳ ಅನುಸರಣೆಗಾಗಿ ಸಂಪೂರ್ಣ ವಿನ್ಯಾಸ ಪರಿಷ್ಕರಣೆ ಮತ್ತು VPN ಕಾರ್ಯಶೀಲತೆಗೆ ಅಗತ್ಯವಿರುವ ಸಂಸ್ಥೆ ಖಾತೆ ವರ್ಗಾವಣೆ ಸೇರಿದಂತೆ ನಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆ ತಂತ್ರವನ್ನು ಮೌಲ್ಯಮಾಪನ ಮಾಡುತ್ತಿರುವಾಗ ಫೆಬ್ರವರಿಯಿಂದ ನವೀಕರಣಗಳನ್ನು ಸ್ಥಗಿತಗೊಳಿಸಲಾಗಿದೆ.",
+        "videncobox_tagline": "ವೀಡಿಯೊ ಪರಿವರ್ತನೆ, ಸಂಪಾದನೆ ಮತ್ತು ಸಂಕುಚನ ಸಾಧನ",
+        "videncobox_status": "ನಿಯಮಿತ ಕಾರ್ಯಾತ್ಮಕ ವರ್ಧನೆಗಳು ಮತ್ತು ಕಾರ್ಯಕ್ಷಮತೆ ಸುಧಾರಣೆಗಳನ್ನು ನಿರಂತರವಾಗಿ ಒದಗಿಸಲಾಗುತ್ತಿದೆ.",
+        "privacy_policy": "ಗೌಪ್ಯತೆ ನೀತಿ",
+        "contact": "ಸಂಪರ್ಕ",
+        "copyright": "© 2026 Way Works. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ."
+    },
+    "ml": {
+        "page_title": "Way Works | ഡെവലപ്പർ പോർട്ടൽ",
+        "nav_subtitle": "iOS-ൽ ലഭ്യമായ നൂതന പ്രവർത്തനക്ഷമത. പരിഷ്കരിച്ച യൂട്ടിലിറ്റി ഉപകരണങ്ങൾ കണ്ടെത്തുക.",
+        "status_label": "വികസന നില",
+        "status_pending": "വിലയിരുത്തലിലാണ്",
+        "status_active": "പുരോഗമിക്കുന്നു",
+        "latest_version": "ഏറ്റവും പുതിയത്:",
+        "packetloss_tagline": "തത്സമയ നെറ്റ്‌വർക്ക് ഗുണനിലവാര അളക്കൽ ഉപകരണം",
+        "packetloss_status": "Apple മാർഗ്ഗനിർദ്ദേശങ്ങൾ പാലിക്കുന്നതിനുള്ള സമ്പൂർണ്ണ ഡിസൈൻ പുനഃക്രമീകരണവും VPN പ്രവർത്തനക്ഷമതയ്ക്ക് ആവശ്യമായ ഓർഗനൈസേഷൻ അക്കൗണ്ട് മൈഗ്രേഷനും ഉൾപ്പെടെ ഞങ്ങളുടെ പ്രതികരണ തന്ത്രം വിലയിരുത്തുന്നതിനിടെ ഫെബ്രുവരി മുതൽ അപ്‌ഡേറ്റുകൾ നിർത്തിവച്ചിരിക്കുന്നു.",
+        "videncobox_tagline": "വീഡിയോ പരിവർത്തനം, എഡിറ്റിംഗ്, കംപ്രഷൻ ഉപകരണം",
+        "videncobox_status": "പതിവ് പ്രവർത്തന മെച്ചപ്പെടുത്തലുകളും പ്രകടന മെച്ചപ്പെടുത്തലുകളും തുടർച്ചയായി നൽകുന്നു.",
+        "privacy_policy": "സ്വകാര്യതാ നയം",
+        "contact": "ബന്ധപ്പെടുക",
+        "copyright": "© 2026 Way Works. എല്ലാ അവകാശങ്ങളും നിക്ഷിപ്തം."
+    },
+    "mr": {
+        "page_title": "Way Works | डेव्हलपर पोर्टल",
+        "nav_subtitle": "iOS वर उपलब्ध प्रगत कार्यक्षमता. परिष्कृत उपयुक्तता साधने एक्सप्लोर करा.",
+        "status_label": "विकास स्थिती",
+        "status_pending": "मूल्यांकनाधीन",
+        "status_active": "सुरू आहे",
+        "latest_version": "नवीनतम:",
+        "packetloss_tagline": "रिअल-टाइम नेटवर्क गुणवत्ता मापन साधन",
+        "packetloss_status": "Apple मार्गदर्शक तत्त्वांचे पालन करण्यासाठी संपूर्ण डिझाइन फेरबदल आणि VPN कार्यक्षमतेसाठी आवश्यक असलेले संस्था खाते स्थलांतर यासह आमच्या प्रतिसाद धोरणाचे मूल्यांकन करत असताना फेब्रुवारीपासून अद्यतने स्थगित करण्यात आली आहेत.",
+        "videncobox_tagline": "व्हिडिओ रूपांतरण, संपादन आणि संकुचन साधन",
+        "videncobox_status": "नियमित कार्यात्मक सुधारणा आणि कार्यप्रदर्शन सुधारणा सतत प्रदान केल्या जात आहेत.",
+        "privacy_policy": "गोपनीयता धोरण",
+        "contact": "संपर्क",
+        "copyright": "© 2026 Way Works. सर्व हक्क राखीव."
+    },
+    "or": {
+        "page_title": "Way Works | ଡେଭଲପର ପୋର୍ଟାଲ",
+        "nav_subtitle": "iOS ରେ ଉପଲବ୍ଧ ଉନ୍ନତ କାର୍ଯ୍ୟକ୍ଷମତା। ପରିଷ୍କୃତ ଉପଯୋଗିତା ଉପକରଣ ଅନ୍ୱେଷଣ କରନ୍ତୁ।",
+        "status_label": "ବିକାଶ ସ୍ଥିତି",
+        "status_pending": "ମୂଲ୍ୟାଙ୍କନ ଚାଲିଛି",
+        "status_active": "ଚାଲିଛି",
+        "latest_version": "ସର୍ବଶେଷ:",
+        "packetloss_tagline": "ରିଅଲ-ଟାଇମ ନେଟୱାର୍କ ଗୁଣବତ୍ତା ମାପ ଉପକରଣ",
+        "packetloss_status": "Apple ନିର୍ଦ୍ଦେଶାବଳୀ ଅନୁପାଳନ ପାଇଁ ସମ୍ପୂର୍ଣ୍ଣ ଡିଜାଇନ ପରିବର୍ତ୍ତନ ଏବଂ VPN କାର୍ଯ୍ୟକ୍ଷମତା ପାଇଁ ଆବଶ୍ୟକ ସଂଗଠନ ଆକାଉଣ୍ଟ ସ୍ଥାନାନ୍ତର ସହିତ ଆମର ପ୍ରତିକ୍ରିୟା ରଣନୀତି ମୂଲ୍ୟାଙ୍କନ କରୁଥିବା ସମୟରେ ଫେବୃଆରୀଠାରୁ ଅପଡେଟଗୁଡ଼ିକ ସ୍ଥଗିତ ରଖାଯାଇଛି।",
+        "videncobox_tagline": "ଭିଡିଓ ରୂପାନ୍ତର, ସମ୍ପାଦନା ଏବଂ ସଙ୍କୋଚନ ଉପକରଣ",
+        "videncobox_status": "ନିୟମିତ କାର୍ଯ୍ୟକ୍ଷମ ଉନ୍ନତି ଏବଂ ପ୍ରଦର୍ଶନ ଉନ୍ନତି ନିରନ୍ତର ପ୍ରଦାନ କରାଯାଉଛି।",
+        "privacy_policy": "ଗୋପନୀୟତା ନୀତି",
+        "contact": "ଯୋଗାଯୋଗ",
+        "copyright": "© 2026 Way Works. ସମସ୍ତ ଅଧିକାର ସଂରକ୍ଷିତ।"
+    },
+    "pa": {
+        "page_title": "Way Works | ਡਿਵੈਲਪਰ ਪੋਰਟਲ",
+        "nav_subtitle": "iOS ਉੱਤੇ ਉਪਲਬਧ ਉੱਨਤ ਕਾਰਜਸ਼ੀਲਤਾ। ਸੁਧਾਰੀਆਂ ਹੋਈਆਂ ਉਪਯੋਗਤਾ ਸਾਧਨਾਂ ਦੀ ਪੜਚੋਲ ਕਰੋ।",
+        "status_label": "ਵਿਕਾਸ ਸਥਿਤੀ",
+        "status_pending": "ਮੁਲਾਂਕਣ ਅਧੀਨ",
+        "status_active": "ਜਾਰੀ ਹੈ",
+        "latest_version": "ਨਵੀਨਤਮ:",
+        "packetloss_tagline": "ਰੀਅਲ-ਟਾਈਮ ਨੈੱਟਵਰਕ ਗੁਣਵੱਤਾ ਮਾਪ ਸਾਧਨ",
+        "packetloss_status": "Apple ਦਿਸ਼ਾ-ਨਿਰਦੇਸ਼ਾਂ ਦੀ ਪਾਲਣਾ ਲਈ ਸੰਪੂਰਨ ਡਿਜ਼ਾਈਨ ਸੁਧਾਰ ਅਤੇ VPN ਕਾਰਜਸ਼ੀਲਤਾ ਲਈ ਲੋੜੀਂਦੇ ਸੰਸਥਾ ਖਾਤਾ ਤਬਾਦਲੇ ਸਮੇਤ ਸਾਡੀ ਜਵਾਬੀ ਰਣਨੀਤੀ ਦਾ ਮੁਲਾਂਕਣ ਕਰਦੇ ਸਮੇਂ ਫਰਵਰੀ ਤੋਂ ਅੱਪਡੇਟ ਮੁਅੱਤਲ ਕਰ ਦਿੱਤੇ ਗਏ ਹਨ।",
+        "videncobox_tagline": "ਵੀਡੀਓ ਪਰਿਵਰਤਨ, ਸੰਪਾਦਨ ਅਤੇ ਸੰਕੁਚਨ ਸਾਧਨ",
+        "videncobox_status": "ਨਿਯਮਿਤ ਕਾਰਜਸ਼ੀਲ ਵਾਧੇ ਅਤੇ ਪ੍ਰਦਰਸ਼ਨ ਸੁਧਾਰ ਲਗਾਤਾਰ ਪ੍ਰਦਾਨ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ।",
+        "privacy_policy": "ਗੋਪਨੀਯਤਾ ਨੀਤੀ",
+        "contact": "ਸੰਪਰਕ",
+        "copyright": "© 2026 Way Works. ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।"
+    },
+    "ta": {
+        "page_title": "Way Works | டெவலப்பர் போர்ட்டல்",
+        "nav_subtitle": "iOS இல் அணுகக்கூடிய மேம்பட்ட செயல்பாடு. செம்மைப்படுத்தப்பட்ட பயன்பாட்டுக் கருவிகளை ஆராயுங்கள்.",
+        "status_label": "மேம்பாட்டு நிலை",
+        "status_pending": "மதிப்பீட்டில் உள்ளது",
+        "status_active": "நடைபெற்று வருகிறது",
+        "latest_version": "சமீபத்தியது:",
+        "packetloss_tagline": "நிகழ்நேர நெட்வொர்க் தர அளவீட்டுக் கருவி",
+        "packetloss_status": "Apple வழிகாட்டுதல்களுக்கு இணங்குவதற்கான முழுமையான வடிவமைப்பு மாற்றம் மற்றும் VPN செயல்பாட்டிற்குத் தேவையான நிறுவனக் கணக்கு இடமாற்றம் உட்பட எங்கள் பதிலளிப்பு உத்தியை மதிப்பீடு செய்யும் போது பிப்ரவரி முதல் புதுப்பிப்புகள் இடைநிறுத்தப்பட்டுள்ளன.",
+        "videncobox_tagline": "வீடியோ மாற்றம், திருத்தம் மற்றும் சுருக்கக் கருவி",
+        "videncobox_status": "வழக்கமான செயல்பாட்டு மேம்பாடுகள் மற்றும் செயல்திறன் மேம்பாடுகள் தொடர்ந்து வழங்கப்படுகின்றன.",
+        "privacy_policy": "தனியுரிமைக் கொள்கை",
+        "contact": "தொடர்பு",
+        "copyright": "© 2026 Way Works. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."
+    },
+    "te": {
+        "page_title": "Way Works | డెవలపర్ పోర్టల్",
+        "nav_subtitle": "iOS లో అందుబాటులో ఉన్న అధునాతన కార్యాచరణ. మెరుగుపరచబడిన యుటిలిటీ సాధనాలను అన్వేషించండి.",
+        "status_label": "అభివృద్ధి స్థితి",
+        "status_pending": "మూల్యాంకనంలో ఉంది",
+        "status_active": "కొనసాగుతోంది",
+        "latest_version": "తాజా:",
+        "packetloss_tagline": "రియల్-టైమ్ నెట్‌వర్క్ నాణ్యత కొలత సాధనం",
+        "packetloss_status": "Apple మార్గదర్శకాల అనుసరణ కోసం పూర్తి డిజైన్ సవరణ మరియు VPN కార్యాచరణకు అవసరమైన సంస్థ ఖాతా మైగ్రేషన్‌తో సహా మా ప్రతిస్పందన వ్యూహాన్ని మూల్యాంకనం చేస్తున్నప్పుడు ఫిబ్రవరి నుండి నవీకరణలు నిలిపివేయబడ్డాయి.",
+        "videncobox_tagline": "వీడియో మార్పిడి, సవరణ మరియు కుదింపు సాధనం",
+        "videncobox_status": "సాధారణ కార్యాచరణ మెరుగుదలలు మరియు పనితీరు మెరుగుదలలు నిరంతరం అందించబడుతున్నాయి.",
+        "privacy_policy": "గోప్యతా విధానం",
+        "contact": "సంప్రదించండి",
+        "copyright": "© 2026 Way Works. అన్ని హక్కులు రిజర్వ్ చేయబడ్డాయి."
+    },
+    "ur": {
+        "page_title": "Way Works | ڈویلپر پورٹل",
+        "nav_subtitle": "iOS پر دستیاب جدید فعالیت۔ بہتر بنائے گئے مفید ٹولز دریافت کریں۔",
+        "status_label": "ترقی کی صورتحال",
+        "status_pending": "زیر جائزہ",
+        "status_active": "جاری ہے",
+        "latest_version": "تازہ ترین:",
+        "packetloss_tagline": "حقیقی وقت میں نیٹ ورک کے معیار کی پیمائش کا ٹول",
+        "packetloss_status": "Apple کے رہنما اصولوں کی تعمیل کے لیے مکمل ڈیزائن کی تجدید اور VPN فعالیت کے لیے درکار تنظیمی اکاؤنٹ کی منتقلی سمیت اپنی جوابی حکمت عملی کا جائزہ لینے کے دوران فروری سے اپ ڈیٹس معطل ہیں۔",
+        "videncobox_tagline": "ویڈیو تبدیلی، ترمیم اور کمپریشن کا ٹول",
+        "videncobox_status": "باقاعدہ فعالیت میں بہتری اور کارکردگی میں بہتری مسلسل فراہم کی جا رہی ہے۔",
+        "privacy_policy": "رازداری کی پالیسی",
+        "contact": "رابطہ",
+        "copyright": "© 2026 Way Works. جملہ حقوق محفوظ ہیں۔"
+    },
     "cs": {
         "page_title": "Way Works | Portál pro vývojáře",
         "nav_subtitle": "Pokročilé funkce dostupné v iOS. Průzkum vylepšených nástrojů.",
@@ -477,6 +642,21 @@ const TRANSLATIONS = {
         "contact": "Kontakt",
         "copyright": "© 2026 Way Works. Všetky práva vyhradené."
     },
+    "sl": {
+        "page_title": "Way Works | Razvijalski portal",
+        "nav_subtitle": "Napredne funkcije, dostopne v sistemu iOS. Raziskovanje izpopolnjenih uporabnih orodij.",
+        "status_label": "Stanje razvoja",
+        "status_pending": "V ocenjevanju",
+        "status_active": "V teku",
+        "latest_version": "Najnovejša:",
+        "packetloss_tagline": "Orodje za merjenje kakovosti omrežja v realnem času",
+        "packetloss_status": "Posodobitve so od februarja začasno ustavljene, medtem ko ocenjujemo svojo strategijo odziva, ki vključuje popolno prenovo oblikovanja zaradi skladnosti s smernicami Apple in prehod na organizacijski račun, potreben za nadaljnje delovanje funkcije VPN.",
+        "videncobox_tagline": "Orodje za pretvorbo, urejanje in stiskanje videa",
+        "videncobox_status": "Nenehno zagotavljanje rednih funkcionalnih izboljšav in izboljšav zmogljivosti.",
+        "privacy_policy": "Politika zasebnosti",
+        "contact": "Stik",
+        "copyright": "© 2026 Way Works. Vse pravice pridržane."
+    },
     "uk": {
         "page_title": "Way Works | Портал розробника",
         "nav_subtitle": "Розширені функції, доступні на iOS. Вивчення вишуканих утиліт.",
@@ -495,7 +675,7 @@ const TRANSLATIONS = {
 };
 
 const SUPPORTED_LOCALES = [
-    "ar", "bn", "ca", "cs", "da", "de", "el", "en-AU", "en-CA", "en-GB", "en", "es-MX", "es", "fi", "fr-CA", "fr", "he", "hi", "hr", "hu", "id", "it", "ja", "ko", "ms", "nb", "nl", "pl", "pt-BR", "pt", "ro", "ru", "sk", "sv", "th", "tr", "uk", "vi", "zh-Hans", "zh-Hant"
+    "ar", "bn", "ca", "cs", "da", "de", "el", "en-AU", "en-CA", "en-GB", "en", "es-MX", "es", "fi", "fr-CA", "fr", "gu", "he", "hi", "hr", "hu", "id", "it", "ja", "kn", "ko", "ml", "mr", "ms", "nb", "nl", "or", "pa", "pl", "pt-BR", "pt", "ro", "ru", "sk", "sl", "sv", "ta", "te", "th", "tr", "uk", "ur", "vi", "zh-Hans", "zh-Hant"
 ];
 
 // Map remaining locales to major codes or provide basic stubs to ensure "support"

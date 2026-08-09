@@ -1,16 +1,57 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- i18n Logic ---
+
+    // Locale codes browsers report that have no dictionary of their own.
+    // Without these, zh-CN/zh-TW/zh-HK/zh-SG never reach the zh-Hans/zh-Hant
+    // dictionaries that do exist, and fall all the way back to English.
+    const LANG_ALIASES = {
+        'zh': 'zh-Hans',
+        'zh-CN': 'zh-Hans',
+        'zh-SG': 'zh-Hans',
+        'zh-HK': 'zh-Hant',
+        'zh-TW': 'zh-Hant',
+        'no': 'nb',
+        'nn': 'nb',
+        'es-419': 'es-MX',
+        'pt-PT': 'pt'
+    };
+
+    // Case-insensitive index of everything resolvable, built once after
+    // translations.js has finished generating its stubs. A real dictionary
+    // always wins over an alias, so adding e.g. a "zh" dictionary later
+    // silently takes precedence rather than being shadowed by the alias.
+    const LOCALE_LOOKUP = {};
+    Object.keys(TRANSLATIONS).forEach(key => {
+        LOCALE_LOOKUP[key.toLowerCase()] = key;
+    });
+    Object.keys(LANG_ALIASES).forEach(alias => {
+        const key = alias.toLowerCase();
+        const target = LANG_ALIASES[alias];
+        if (TRANSLATIONS[target] && !LOCALE_LOOKUP[key]) LOCALE_LOOKUP[key] = target;
+    });
+
+    // Resolve a BCP-47 tag to a key that exists in TRANSLATIONS: try the whole
+    // tag, then drop one subtag at a time. This reaches zh-Hans from
+    // zh-Hans-CN and en from en-NZ, where splitting on the first hyphen would
+    // land on the non-existent "zh" / lose the region entirely.
+    const resolveLanguage = (tag) => {
+        if (!tag) return null;
+        const parts = String(tag).toLowerCase().split('-');
+        while (parts.length) {
+            const hit = LOCALE_LOOKUP[parts.join('-')];
+            if (hit) return hit;
+            parts.pop();
+        }
+        return null;
+    };
+
     const getLanguage = () => {
         const params = new URLSearchParams(window.location.search);
-        const langParam = params.get('lang');
-        if (langParam && TRANSLATIONS[langParam]) return langParam;
+        // ?lang= goes through the same resolver, so ?lang=zh-CN is testable.
+        const fromQuery = resolveLanguage(params.get('lang'));
+        if (fromQuery) return fromQuery;
 
-        // Try exact match first (e.g. en-AU), then base match (en)
-        const navLang = navigator.language || navigator.userLanguage;
-        if (TRANSLATIONS[navLang]) return navLang;
-
-        const shortLang = navLang.split('-')[0];
-        return TRANSLATIONS[shortLang] ? shortLang : 'en';
+        return resolveLanguage(navigator.language || navigator.userLanguage) || 'en';
     };
 
     const applyTranslations = (lang) => {
@@ -33,8 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
             descriptionMeta.setAttribute('content', t['meta_description']);
         }
 
-        // RTL Support (ar = Arabic, he = Hebrew)
-        const isRTL = ['ar', 'he'].includes(lang.split('-')[0]);
+        // RTL Support (ar = Arabic, he = Hebrew, ur = Urdu)
+        const isRTL = ['ar', 'he', 'ur'].includes(lang.split('-')[0]);
         document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
         document.documentElement.lang = lang;
 
