@@ -10,11 +10,16 @@
   /* #555 was 2.65:1 on --bg-color — below the 4.5:1 WCAG AA floor for body
      text. This is the dimmest tone that still clears it (4.86:1). */
   --text-tertiary: #7d7d88;
-  --accent-color: #4f46e5;
-  --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
   --status-active: #10b981;
   --status-pending: #f59e0b;
   --glass-blur: 12px;
+  --font-display: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  /* Named easings. The card used to carry a bouncy overshoot curve, which
+     reads as decoration on something that is not a control. */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 0.15s;
+  --dur-base: 0.25s;
 }
 
 * {
@@ -31,7 +36,7 @@ body {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-body);
   background-color: var(--bg-color);
   color: var(--text-primary);
   line-height: 1.6;
@@ -76,16 +81,18 @@ header {
   margin-bottom: 5rem;
 }
 
+/* Solid ink on a display face rather than a gradient fill. A
+   background-clip: text gradient is the fastest way to read as generated, and
+   the accent belongs in the canvas blooms, not on the headline. */
 h1 {
+  font-family: var(--font-display);
   font-size: clamp(2.2rem, 6vw, 3rem);
-  font-weight: 800;
+  font-weight: 700;
   min-width: 0;
   overflow-wrap: anywhere;
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text-primary);
   margin-bottom: 1rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .subtitle {
@@ -118,7 +125,8 @@ h1 {
   border: 1px solid var(--card-border);
   border-radius: 24px;
   padding: clamp(1.25rem, 6%, 2rem);
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  transition: transform var(--dur-base) var(--ease-out),
+              background-color var(--dur-base) var(--ease-out);
   position: relative;
   overflow: hidden;
   /* The card, not the viewport, decides how the header lays out — its width is
@@ -130,10 +138,14 @@ h1 {
   column-gap: 1rem;
 }
 
-.app-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  background: rgba(255, 255, 255, 0.05);
+/* Only where a pointer can actually hover — on touch this fires on tap and
+   sticks. The card is not a link, so the lift is kept small enough to read as
+   surface response rather than an invitation to click. */
+@media (hover: hover) and (pointer: fine) {
+  .app-card:hover {
+    transform: translateY(-4px);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
 }
 
 /* Icon beside the name rather than above it. hallmark names the stacked
@@ -161,9 +173,11 @@ h1 {
      ~292px at 24px, which no phone-width card can give it. cqi resolves
      against the card's content box, so the coefficient is set to reach the
      1.5rem ceiling by the time a card is wide enough to hold the name. */
+  font-family: var(--font-display);
   font-size: clamp(1.125rem, 6cqi, 1.5rem);
   font-weight: 700;
   line-height: 1.25;
+  letter-spacing: -0.02em;
   min-width: 0;
   overflow-wrap: anywhere;
   text-wrap: balance;
@@ -266,7 +280,8 @@ h1 {
 
 .card-link {
   font-size: 0.85rem;
-  font-weight: 500;
+  /* 500 was never loaded, so it rendered at 400 regardless. */
+  font-weight: 600;
   color: var(--text-secondary);
   text-decoration: none;
   /* Deliberately left wrappable. Pinning labels to one line overflows the card
@@ -274,13 +289,20 @@ h1 {
      than a 320px card has — .card-links wraps the row, and a label that still
      cannot fit breaks rather than spilling. */
   overflow-wrap: anywhere;
-  transition: all 0.2s ease;
+  transition: color var(--dur-fast) var(--ease-out);
   position: relative;
 }
 
 .card-link:hover {
   color: var(--text-primary);
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Never animated: the ring has to be there the instant focus lands. */
+.card-link:focus-visible {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 3px;
+  border-radius: 2px;
+  color: var(--text-primary);
 }
 
 .footer {
@@ -301,5 +323,21 @@ h1 {
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.8s ease forwards;
+  animation: fadeIn 0.8s var(--ease-out) forwards;
+}
+
+/* Spatial motion collapses to a short crossfade. js/main.js checks the same
+   query before it writes its inline card transitions, which would otherwise
+   override anything declared here. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .app-card:hover { transform: none; }
 }

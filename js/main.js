@@ -142,13 +142,18 @@ document.addEventListener('DOMContentLoaded', () => {
     applyTranslations(currentLang);
 
     // --- Visual Animations ---
+    // The reduced-motion block in the stylesheet already flattens these
+    // transitions — !important beats an inline declaration. Bailing out here
+    // additionally keeps the cards from ever being set to opacity: 0.
     const observeCards = () => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
         const cards = document.querySelectorAll('.app-card');
         cards.forEach((card, index) => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(20px)';
-            card.style.transition = `opacity 0.6s ease ${index * 0.15}s, transform 0.6s ease ${index * 0.15}s`;
-            
+            card.style.transition = `opacity 0.6s var(--ease-out) ${index * 0.15}s, transform 0.6s var(--ease-out) ${index * 0.15}s`;
+
             setTimeout(() => {
                 card.style.opacity = '1';
                 card.style.transform = 'translateY(0)';
