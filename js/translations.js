@@ -16,8 +16,7 @@ const TRANSLATIONS = {
         "videncobox_status": "定期的な機能拡張およびパフォーマンス改善を継続実施中。",
         "privacy_policy": "プライバシーポリシー",
         "contact": "お問い合わせ",
-        "copyright": "© 2026 Way Works. All rights reserved.",
-        "redirect_text": "リダイレクト中..."
+        "copyright": "© 2026 Way Works. All rights reserved."
     },
     en: {
         "page_title": "Way Works | Developer Portal",
@@ -36,8 +35,7 @@ const TRANSLATIONS = {
         "videncobox_status": "Continuously providing regular functional enhancements and performance improvements.",
         "privacy_policy": "Privacy Policy",
         "contact": "Contact",
-        "copyright": "© 2026 Way Works. All rights reserved.",
-        "redirect_text": "Redirecting..."
+        "copyright": "© 2026 Way Works. All rights reserved."
     },
     "en-AU": { "nav_subtitle": "Built for iOS, made for power. Exploring refined utility tools.", "packetloss_status": "Updates paused since February for Apple compliance and org account transition.", "videncobox_status": "Ongoing improvements and feature updates." },
     "en-CA": { "nav_subtitle": "Advanced tools for iOS, refined for you.", "packetloss_status": "Updates suspended since February for design overhaul and account migration.", "videncobox_status": "Providing regular performance boosts." },

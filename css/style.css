@@ -265,6 +265,11 @@ h1 {
 .status-text {
   font-size: 0.9rem;
   color: var(--text-secondary);
+  /* German compounds like "Leistungsverbesserungen" are wider than a 300px
+     card, which is just outside the 320px floor but inside real hardware
+     (a folding phone's cover screen). */
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .version-info {
@@ -298,6 +303,10 @@ h1 {
      than a 320px card has — .card-links wraps the row, and a label that still
      cannot fit breaks rather than spilling. */
   overflow-wrap: anywhere;
+  /* Text alone gives a 22px tap target, under the 24px floor. */
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
   transition: color var(--dur-fast) var(--ease-out);
   position: relative;
 }
