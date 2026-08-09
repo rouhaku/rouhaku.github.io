@@ -48,7 +48,7 @@ const TRANSLATIONS = {
         "status_label": "État du développement",
         "status_pending": "À l'étude",
         "status_active": "En développement",
-        "latest_version": "Dernière :",
+        "latest_version": "Dernière :",
         "packetloss_tagline": "Outil de mesure et de visualisation de la qualité du réseau en temps réel",
         "packetloss_status": "Les mises à jour sont suspendues depuis février car nous étudions notre stratégie de réponse, incluant une refonte complète du design pour la mise en conformité avec les directives d'Apple et la migration vers un compte d'organisation indispensable au maintien de la fonctionnalité VPN.",
         "videncobox_tagline": "Outil de conversion, d'édition et de compression vidéo",
@@ -96,7 +96,7 @@ const TRANSLATIONS = {
         "latest_version": "Última:",
         "packetloss_tagline": "Herramienta de medición y visualización de calidad de red en tiempo real",
         "packetloss_status": "Las actualizaciones están suspendidas desde febrero mientras evaluamos nuestra estrategia de respuesta, lo que incluye un rediseño completo para cumplir con las directrices de Apple y la migración a una cuenta de organización necesaria para mantener la funcionalidad VPN.",
-        "videncobox_tagline": "Herramienta de conversión, edición y compresión de video",
+        "videncobox_tagline": "Herramienta de conversión, edición y compresión de vídeo",
         "videncobox_status": "Mejoras funcionales y de rendimiento periódicas en curso continuo.",
         "privacy_policy": "Política de privacidad",
         "contact": "Contacto",
@@ -129,7 +129,7 @@ const TRANSLATIONS = {
         "videncobox_tagline": "Ferramenta de conversão, edição e compressão de vídeo",
         "videncobox_status": "Melhorias funcionais e de desempenho regulares em andamento contínuo.",
         "privacy_policy": "Política de Privacidade",
-        "contact": "Contato",
+        "contact": "Contacto",
         "copyright": "© 2026 Way Works. Todos os direitos reservados."
     },
     "ru": {
@@ -684,4 +684,31 @@ SUPPORTED_LOCALES.forEach(loc => {
         const base = loc.split('-')[0];
         TRANSLATIONS[loc] = JSON.parse(JSON.stringify(TRANSLATIONS[base] || TRANSLATIONS['en']));
     }
+});
+
+// Regional variants that differ from their base in only a few strings.
+// Listing just the differences — rather than a full copy — keeps an edit to
+// es/fr/pt flowing through to the variant instead of silently diverging from
+// it. Runs after the stub pass, so each variant already holds a copy of its
+// base and only the keys below are replaced.
+//
+// es and pt are the European forms (vídeo, Contacto); Latin American and
+// Brazilian tags are routed here by LANG_ALIASES in js/main.js.
+const REGIONAL_OVERRIDES = {
+    'es-MX': {
+        "status_pending": "En análisis",
+        "videncobox_tagline": "Herramienta de conversión, edición y compresión de video",
+        "privacy_policy": "Aviso de privacidad"
+    },
+    'fr-CA': {
+        "contact": "Nous joindre"
+    },
+    'pt-BR': {
+        "status_label": "Status de desenvolvimento",
+        "contact": "Contato"
+    }
+};
+
+Object.keys(REGIONAL_OVERRIDES).forEach(loc => {
+    if (TRANSLATIONS[loc]) Object.assign(TRANSLATIONS[loc], REGIONAL_OVERRIDES[loc]);
 });

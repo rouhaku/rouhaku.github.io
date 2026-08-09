@@ -12,7 +12,29 @@ document.addEventListener('DOMContentLoaded', () => {
         'zh-TW': 'zh-Hant',
         'no': 'nb',
         'nn': 'nb',
+        // Latin American Spanish. es itself is European Spanish (vídeo,
+        // Política de privacidad), so region tags that resolveLanguage would
+        // otherwise truncate to es are routed to es-MX instead.
         'es-419': 'es-MX',
+        'es-AR': 'es-MX',
+        'es-BO': 'es-MX',
+        'es-CL': 'es-MX',
+        'es-CO': 'es-MX',
+        'es-CR': 'es-MX',
+        'es-CU': 'es-MX',
+        'es-DO': 'es-MX',
+        'es-EC': 'es-MX',
+        'es-GT': 'es-MX',
+        'es-HN': 'es-MX',
+        'es-NI': 'es-MX',
+        'es-PA': 'es-MX',
+        'es-PE': 'es-MX',
+        'es-PR': 'es-MX',
+        'es-PY': 'es-MX',
+        'es-SV': 'es-MX',
+        'es-US': 'es-MX',
+        'es-UY': 'es-MX',
+        'es-VE': 'es-MX',
         'pt-PT': 'pt'
     };
 
