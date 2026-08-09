@@ -67,11 +67,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Set Document Title and Meta Description
-        if (t['page_title']) document.title = t['page_title'];
+        // Set Document Title and Meta Description.
+        // Same fallback chain as the elements above: without it, a locale that
+        // omits one of these keys keeps the Japanese text written into
+        // index.html. en-AU/en-CA/en-GB carry no page_title, and only en and ja
+        // carry a meta_description.
+        const pageTitle = t['page_title'] || TRANSLATIONS['en']['page_title'] || TRANSLATIONS['ja']['page_title'];
+        if (pageTitle) document.title = pageTitle;
         const descriptionMeta = document.querySelector('meta[name="description"]');
-        if (descriptionMeta && t['meta_description']) {
-            descriptionMeta.setAttribute('content', t['meta_description']);
+        const description = t['meta_description'] || TRANSLATIONS['en']['meta_description'] || TRANSLATIONS['ja']['meta_description'];
+        if (descriptionMeta && description) {
+            descriptionMeta.setAttribute('content', description);
         }
 
         // RTL Support (ar = Arabic, he = Hebrew, ur = Urdu)
