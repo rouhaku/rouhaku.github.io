@@ -123,7 +123,22 @@ h1 {
    old 768px breakpoint a track was 332px — narrower than the same card on a
    390px phone — so tablets got the tightest layout on the site. */
 @media (min-width: 56rem) {
-  .app-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .app-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* Side by side, the cards share their three rows so a one-line tagline and
+       a two-line one still start their status panel at the same height. Each
+       card sizing its own rows is what made the panels disagree: the taller
+       tagline pushed one panel's top edge ~55px off its neighbour's. A
+       min-height on the tagline was the earlier attempt and could not survive a
+       three-line locale — the shared row takes whatever the longest one needs.
+       Only two cards fit a row here; a third would open rows 4-6 and would need
+       its own track definition. */
+    grid-template-rows: auto auto 1fr;
+  }
+  .app-card {
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+  }
 }
 
 .app-card {
@@ -213,14 +228,21 @@ h1 {
 @container app-card (min-width: 21.5rem) { .app-icon { width: 72px; height: 72px; } }
 @container app-card (min-width: 24rem) { .app-icon { width: 80px; height: 80px; } }
 
-/* Pinned to the bottom of the card so the two cards line up on their status
-   blocks. min-height on the tagline used to do this, but 3em resolved to
-   45.6px against a 48.6px two-line tagline — 3px short of the job — and could
-   never hold across locales whose taglines run to three lines. */
+/* Filled to the row so the two cards line up on their status blocks, top edge
+   as well as bottom. min-height on the tagline used to do this, but 3em
+   resolved to 45.6px against a 48.6px two-line tagline — 3px short of the job —
+   and could never hold across locales whose taglines run to three lines.
+   Pinning to the bottom fixed the lower edge but not the upper one: the panel
+   stayed as tall as its own contents, so a card with a one-line tagline and a
+   two-line status began its panel ~55px below its neighbour. Stretching pins
+   both edges without a measurement to go stale, and .status-text absorbs the
+   slack so the version line and links stay where they were. */
 .status-section {
   grid-column: 1 / -1;
   grid-row: 3;
-  align-self: end;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
   background: var(--card-bg);
   border-radius: 16px;
   padding: 1.2rem;
@@ -273,6 +295,9 @@ h1 {
 .status-text {
   font-size: 0.9rem;
   color: var(--text-secondary);
+  /* Takes the slack when the panel is taller than its contents, so the shorter
+     card grows here rather than pushing its version line and links up. */
+  flex: 1;
   /* German compounds like "Leistungsverbesserungen" are wider than a 300px
      card, which is just outside the 320px floor but inside real hardware
      (a folding phone's cover screen). */
